@@ -7,45 +7,14 @@
         <Setter Property="OutsideBorderBrush" Value="#1A1A1A" />
         <Setter Property="OutsideBorderThickness" Value="1" />
         <Setter Property="AreAnimationsEnabled" Value="False"></Setter>
-        
-        <Setter Property="BorderBrush" >
-            <Setter.Value>
-                <LinearGradientBrush>
-                    <GradientStop Color="#c8c8c8" Offset="0"/>
-                    <GradientStop Color="#383838" Offset="1"/>
-                </LinearGradientBrush>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="BorderThickness" Value="1" />
+
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="BorderThickness" Value="2" />
         <Setter Property="TextBrush" Value="White" />
-        <Setter Property="Background">
-            <Setter.Value>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Color="#383838" Offset="0"/>
-                    <GradientStop Color="#383838" Offset="0.6"/>
-                    <GradientStop Color="#1A1A1A" Offset="1"/>
-                </LinearGradientBrush>
-            </Setter.Value>
-        </Setter>
+        <Setter Property="Background" Value="#2c343f"/>
 
-        <Setter Property="MouseOverBrush">
-            <Setter.Value>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Color="#787878" Offset="0"/>
-                    <GradientStop Color="#787878" Offset="0.6"/>
-                    <GradientStop Color="#505050" Offset="1"/>
-                </LinearGradientBrush>
-            </Setter.Value>
-        </Setter>
-
-        <Setter Property="MouseOverBorderBrush">
-            <Setter.Value>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Color="#FFFFFF" Offset="0"/>
-                    <GradientStop Color="#646464" Offset="1"/>
-                </LinearGradientBrush>
-            </Setter.Value>
-        </Setter>
+        <Setter Property="MouseOverBrush" Value="#787878"/>
+        <Setter Property="MouseOverBorderBrush" Value="#646464"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -69,10 +38,9 @@
                                 SnapsToDevicePixels="True" />
 
                             <TextBlock x:Name="PART_KeyText"
-                                Margin="3,0,0,0"
                                 FontSize="20"
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
                                 Foreground="{TemplateBinding TextBrush}"
                                 SnapsToDevicePixels="true" />
                         </Grid>
