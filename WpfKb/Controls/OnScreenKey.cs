@@ -42,7 +42,7 @@ namespace WpfKb.Controls
         private Border _mouseDownSurface;
         private TextBlock _keyText;
 
-        private readonly SolidColorBrush _keySurfaceBrush = new SolidColorBrush(Color.FromRgb(44, 52, 63));
+        private readonly SolidColorBrush _keySurfaceBrush = new SolidColorBrush(Color.FromRgb(21, 28, 36));
 
         private readonly SolidColorBrush _keySurfaceBorderBrush = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
