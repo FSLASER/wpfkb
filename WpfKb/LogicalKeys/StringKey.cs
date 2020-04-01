@@ -1,5 +1,6 @@
-﻿
-using WpfKb.Input;
+﻿using System;
+using System.Linq;
+using WindowsInput;
 
 namespace WpfKb.LogicalKeys
 {

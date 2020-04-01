@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using WpfKb.Input;
+using WindowsInput;
 
 namespace WpfKb.LogicalKeys
 {
