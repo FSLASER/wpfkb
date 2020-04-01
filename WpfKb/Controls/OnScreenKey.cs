@@ -42,39 +42,15 @@ namespace WpfKb.Controls
         private Border _mouseDownSurface;
         private TextBlock _keyText;
 
-        private readonly GradientBrush _keySurfaceBrush = new LinearGradientBrush(
-            new GradientStopCollection
-                {
-                    new GradientStop(Color.FromRgb(56, 56, 56), 0),
-                    new GradientStop(Color.FromRgb(56, 56, 56), 0.6),
-                    new GradientStop(Color.FromRgb(26, 26, 26), 1)
-                }, 90);
+        private readonly SolidColorBrush _keySurfaceBrush = new SolidColorBrush(Color.FromRgb(44, 52, 63));
 
-        private readonly GradientBrush _keySurfaceBorderBrush = new LinearGradientBrush(
-            new GradientStopCollection
-                {
-                    new GradientStop(Color.FromRgb(200, 200, 200), 0),
-                    new GradientStop(Color.FromRgb(56, 56, 56), 1)
-                }, 90);
+        private readonly SolidColorBrush _keySurfaceBorderBrush = new SolidColorBrush(Color.FromRgb(255, 255, 255));
 
-        private readonly GradientBrush _keySurfaceMouseOverBrush = new LinearGradientBrush(
-            new GradientStopCollection
-                {
-                    new GradientStop(Color.FromRgb(120, 120, 120), 0),
-                    new GradientStop(Color.FromRgb(120, 120, 120), 0.6),
-                    new GradientStop(Color.FromRgb(80, 80, 80), 1)
-                }, 90);
+        private readonly SolidColorBrush _keySurfaceMouseOverBrush = new SolidColorBrush(Color.FromRgb(120, 120, 120));
 
-        private readonly GradientBrush _keySurfaceMouseOverBorderBrush = new LinearGradientBrush(
-            new GradientStopCollection
-                {
-                    new GradientStop(Color.FromRgb(255, 255, 255), 0),
-                    new GradientStop(Color.FromRgb(100, 100, 100), 1),
-                }, 90);
+        private readonly SolidColorBrush _keySurfaceMouseOverBorderBrush = new SolidColorBrush(Color.FromRgb(100, 100, 100));
 
         private readonly SolidColorBrush _keyOutsideBorderBrush = new SolidColorBrush(Color.FromArgb(255, 26, 26, 26));
-
-
 
         public ILogicalKey Key
         {
@@ -201,13 +177,13 @@ namespace WpfKb.Controls
             Child = g;
 
             _keySurface = new Border
-                              {
-                                  CornerRadius = new CornerRadius(3),
-                                  BorderBrush = _keySurfaceBorderBrush,
-                                  BorderThickness = new Thickness(1),
-                                  Background = _keySurfaceBrush,
-                                  SnapsToDevicePixels = true
-                              };
+            {
+                CornerRadius = new CornerRadius(3),
+                BorderBrush = _keySurfaceBorderBrush,
+                BorderThickness = new Thickness(1),
+                Background = _keySurfaceBrush,
+                SnapsToDevicePixels = true
+            };
             g.Children.Add(_keySurface);
 
             _mouseDownSurface = new Border
@@ -221,10 +197,9 @@ namespace WpfKb.Controls
 
             _keyText = new TextBlock
                            {
-                               Margin = new Thickness(3, 0, 0, 0),
                                FontSize = 20,
-                               HorizontalAlignment = HorizontalAlignment.Left,
-                               VerticalAlignment = VerticalAlignment.Top,
+                               HorizontalAlignment = HorizontalAlignment.Center,
+                               VerticalAlignment = VerticalAlignment.Center,
                                Foreground = Brushes.White,
                                SnapsToDevicePixels = true
                            };
